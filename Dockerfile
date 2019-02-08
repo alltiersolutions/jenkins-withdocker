@@ -13,6 +13,7 @@ RUN apt-get update && \
       gnupg2 \
       mariadb-client \
       php-cli \
+      rsync \
       software-properties-common \
 &&  curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey \
 &&  add-apt-repository \
