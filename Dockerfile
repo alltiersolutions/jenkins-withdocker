@@ -20,7 +20,7 @@ RUN apt-get update && \
       stable" \
 &&  apt-get update \
 &&  apt-get -y install docker-ce \
-&&  usermod -a -G docker jenkins
+&&  usermod -a -G docker jenkins \
 
 # Install Drush version specified above
 && curl -fsSL -o /usr/local/bin/drush "https://github.com/drush-ops/drush/releases/download/$DRUSH_VERSION/drush.phar" \
