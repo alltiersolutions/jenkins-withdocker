@@ -14,6 +14,7 @@ RUN apt-get update && \
       mariadb-client \
       php-cli \
       php-mysql \
+      php-xml \
       rsync \
       software-properties-common \
 &&  curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey \
