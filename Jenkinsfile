@@ -10,7 +10,7 @@ node {
     stage('Build alltiersolutions/jenkins-withdocker Image and Push') {
         
         docker.withRegistry('https://registry.hub.docker.com', 'docker_registry') {
-          def image = docker.build("alltiersolutions/jenkins-withdocker-${env.GIT_SHORT_COMMIT}", '--no-cache --pull ./')
+          def image = docker.build("alltiersolutions/jenkins-withdocker:${env.GIT_SHORT_COMMIT}", '--no-cache --pull ./')
           image.push()
           //image.push('latest')
         }
