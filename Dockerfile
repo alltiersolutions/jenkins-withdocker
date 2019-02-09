@@ -13,6 +13,8 @@ RUN apt-get update && \
       gnupg2 \
       mariadb-client \
       php-cli \
+      php-gd \
+      php-mbstring \
       php-mysql \
       php-xml \
       rsync \
