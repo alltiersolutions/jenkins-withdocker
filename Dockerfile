@@ -2,7 +2,7 @@ FROM jenkins/jenkins:lts
 MAINTAINER chris@alltiersolutions.com
 USER root
 # Set Drush version to install
-ENV DRUSH_VERSION 8.1.18
+ENV DRUSH_VERSION 8.3.2
 RUN set -eux; \
 	apt-get update; \
         apt-get install -y \
