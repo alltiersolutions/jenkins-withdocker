@@ -20,7 +20,7 @@ RUN set -eux; \
     php-xml \
     rsync \
     software-properties-common \
-		; \
+	; \
 	# Set up additional repos
 	# For kubectl
 	curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - ; \
@@ -43,6 +43,6 @@ RUN set -eux; \
   #curl -fsSL -o /usr/local/bin/drush "https://github.com/drush-ops/drush/releases/download/$DRUSH_VERSION/drush.phar"; \
 	#chmod +x /usr/local/bin/drush \
 	# Install the composer version specified above
-	curl -o /usr/local/bin/composer "https://getcomposer.org/download/$COMPOSER_VERSION/composer.phar" \
+	curl -o /usr/local/bin/composer "https://getcomposer.org/download/$COMPOSER_VERSION/composer.phar"; \
 	chmod +x /usr/local/bin/composer
 USER jenkins
