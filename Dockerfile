@@ -2,11 +2,11 @@ FROM jenkins/jenkins:lts
 MAINTAINER chris@alltiersolutions.com
 USER root
 # Set Composer version to install
-ENV COMPOSER_VERSION 1.9.1
+ENV COMPOSER_VERSION 1.10.5
 # Set Drush version to install
 #ENV DRUSH_VERSION 8.3.2
 RUN set -eux; \
-	apt-get update; \
+  apt-get update; \
   apt-get install -y \
     apt-transport-https \
     ca-certificates \
@@ -45,4 +45,7 @@ RUN set -eux; \
 	# Install the composer version specified above
 	curl -o /usr/local/bin/composer "https://getcomposer.org/download/$COMPOSER_VERSION/composer.phar"; \
 	chmod +x /usr/local/bin/composer
+	# Install Jenkins plugins here or install during provisioning of the container?
+	# /usr/local/bin/install-plugins.sh greenballs
+	# /usr/local/bin/install-plugins.sh kubernetes
 USER jenkins
